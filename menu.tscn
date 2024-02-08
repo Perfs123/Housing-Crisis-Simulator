@@ -17,10 +17,10 @@ script = ExtResource("1_ga1oh")
 
 [node name="newGame" type="Button" parent="."]
 layout_mode = 0
-offset_left = 430.0
-offset_top = 160.0
-offset_right = 589.0
-offset_bottom = 203.0
+offset_left = 436.0
+offset_top = 158.0
+offset_right = 595.0
+offset_bottom = 201.0
 text = "New Game"
 
 [node name="continue" type="Button" parent="."]
