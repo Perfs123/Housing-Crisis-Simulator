@@ -1,2 +1,7 @@
+res://menu.gd
 res://menu.tscn
 res://main_game.tscn
+res://Options.gd
+res://mainGame.gd
+res://Global.gd
+res://options.tscn

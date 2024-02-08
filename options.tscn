@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://5x4qq5pc3wjf"]
+
+[ext_resource type="Script" path="res://Options.gd" id="1_v21mp"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v21mp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 5.0
+offset_right = 1152.0
+offset_bottom = 652.0
+color = Color(1, 1, 1, 0)
+
+[node name="FullscreenButton" type="CheckBox" parent="ColorRect"]
+layout_mode = 0
+offset_left = 368.0
+offset_top = 244.0
+offset_right = 392.0
+offset_bottom = 268.0
+
+[node name="Fullscreen" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 249.0
+offset_right = 505.0
+offset_bottom = 272.0
+text = "Fullscreen"
+
+[node name="Back" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 294.0
+offset_right = 513.0
+offset_bottom = 327.0
+text = "Back"
+
+[connection signal="toggled" from="ColorRect/FullscreenButton" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="ColorRect/Back" to="." method="_on_back_pressed"]

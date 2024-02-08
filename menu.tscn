@@ -1,8 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp1x53i081wvs"]
+[gd_scene load_steps=2 format=3 uid="uid://dp1x53i081wvs"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_ga1oh"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dme2o"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -47,56 +45,6 @@ offset_right = 653.0
 offset_bottom = 424.0
 text = "Exit"
 
-[node name="optionsMenu" type="ColorRect" parent="."]
-visible = false
-self_modulate = Color(0.247059, 0.247059, 0.247059, 1)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -575.0
-offset_top = -322.0
-offset_right = 572.0
-offset_bottom = 324.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="fullscreen" type="CheckBox" parent="optionsMenu"]
-self_modulate = Color(0.772549, 0.721569, 0, 1)
-material = SubResource("ShaderMaterial_dme2o")
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -105.5
-offset_top = 286.0
-offset_right = -81.5
-offset_bottom = 310.0
-grow_horizontal = 2
-
-[node name="fullscreenLabel" type="Label" parent="optionsMenu"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = 22.5
-offset_top = 289.0
-offset_right = 101.5
-offset_bottom = 312.0
-grow_horizontal = 2
-text = "Fullscreen"
-
-[node name="back" type="Button" parent="optionsMenu"]
-layout_mode = 0
-offset_left = 464.0
-offset_top = 341.0
-offset_right = 677.0
-offset_bottom = 386.0
-text = "Back"
-
+[connection signal="pressed" from="newGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
-[connection signal="toggled" from="optionsMenu/fullscreen" to="." method="_on_fullscreen_toggled"]
-[connection signal="pressed" from="optionsMenu/back" to="." method="_on_back_pressed"]
